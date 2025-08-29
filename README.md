@@ -30,31 +30,6 @@ A modern SaaS application that instantly creates comprehensive marketing content
 - Node.js 18+ and npm
 - n8n workflow endpoint (or use the included mock responses)
 
-### Installation
-
-1. **Clone and install dependencies:**
-```bash
-cd realtor-content-saas
-npm install
-```
-
-2. **Configure environment variables:**
-```bash
-# Copy the environment template
-cp .env.local.example .env.local
-
-# Edit .env.local with your settings
-N8N_WEBHOOK_URL=https://n8n.srv975468.hstgr.cloud/webhook-test/listing-launch
-```
-
-3. **Start the development server:**
-```bash
-npm run dev
-```
-
-4. **Open your browser:**
-Navigate to [http://localhost:3000](http://localhost:3000)
-
 ## 📱 Usage
 
 ### Sample Test Data
@@ -83,10 +58,6 @@ Use this sample data to test the application:
 - **X (Twitter)** 🐦 - Threads and media posts
 - **TikTok** 🎵 - Vertical videos with trending hashtags
 
-## 🔗 n8n Integration
-
-The application integrates with n8n workflows via webhook at:
-`https://n8n.srv975468.hstgr.cloud/webhook-test/listing-launch`
 
 ## 🛠️ Technical Stack
 - **Frontend**: Next.js 15 with TypeScript
