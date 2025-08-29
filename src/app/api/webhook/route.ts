@@ -12,7 +12,7 @@ interface RequestBody {
 // Enhanced in-memory cache to prevent duplicate requests
 const processedSessions = new Map<string, { 
   timestamp: number; 
-  response: any; 
+  response: WebhookResponse | null; 
   inProgress: boolean; 
   requestId: string 
 }>();
