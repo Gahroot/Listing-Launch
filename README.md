@@ -1,105 +1,107 @@
-# Listing Launch
+# Listing Launch - Realtor Content Generation SaaS
 
-A modern web application for managing and launching listings, built with React, TypeScript, and Vite.
+**No Nonsense Content Generation Done For You, Not By You**
 
-## Development Environment Status
+A modern SaaS application that instantly creates comprehensive marketing content for realtor property listings, including social media posts, videos, landing pages, and email templates.
 
-✅ **All tooling verified and working correctly**
+## ✨ Features
 
-- 🔧 **Build System**: Vite + TypeScript
-- 🧪 **Testing**: Vitest + React Testing Library
-- 📝 **Code Quality**: ESLint + Prettier + Qlty
-- 🎯 **Project Management**: Daddy System
-- 📦 **Dependencies**: All installed and verified
-- 🔍 **Quality Gates**: Zero warnings, all tests pass
+### 🏠 **Complete Marketing Package Generation**
+- **Social Media Content**: Captions and hashtags optimized for 6+ platforms including YouTube, Facebook, Instagram, LinkedIn, X (Twitter), and TikTok
+- **Video Content**: AI-generated scripts and concepts for property tours and promotional videos
+- **Landing Pages**: SEO-optimized microsites with lead capture forms
+- **Email Marketing**: Professional templates with multiple subject line variations
+- **Real-time Progress**: Live updates during the 6-step generation process
 
-## Quick Start
+### 🎨 **Modern Dark Mode UI**
+- Sleek dark theme with purple accent colors
+- Responsive design optimized for all devices
+- Professional Bento Box layout for content approval
+- Interactive theme toggle (light/dark mode)
 
+### ⚡ **Streamlined Workflow**
+1. **Create** (`/create`) - Input property address, status, and agent branding
+2. **Generate** (`/generate`) - Watch real-time progress as content is created
+3. **Approve** (`/approve`) - Review, edit, and approve all generated content
+
+## 🚀 Quick Start
+
+### Prerequisites
+- Node.js 18+ and npm
+- n8n workflow endpoint (or use the included mock responses)
+
+### Installation
+
+1. **Clone and install dependencies:**
 ```bash
-# Install dependencies
+cd realtor-content-saas
 npm install
+```
 
-# Start development server
+2. **Configure environment variables:**
+```bash
+# Copy the environment template
+cp .env.local.example .env.local
+
+# Edit .env.local with your settings
+N8N_WEBHOOK_URL=https://n8n.srv975468.hstgr.cloud/webhook-test/listing-launch
+```
+
+3. **Start the development server:**
+```bash
 npm run dev
-
-# Build for production
-npm run build
-
-# Run tests
-npm test
-
-# Run all quality checks
-npm run quality
 ```
 
-## Available Scripts
+4. **Open your browser:**
+Navigate to [http://localhost:3000](http://localhost:3000)
 
-- `npm run dev` - Start development server on http://localhost:5173
-- `npm run build` - Build for production
-- `npm run preview` - Preview production build locally
-- `npm run test` - Run test suite
-- `npm run test:ui` - Run tests with UI
-- `npm run test:coverage` - Generate test coverage report
-- `npm run lint` - Run ESLint
-- `npm run lint:fix` - Fix ESLint issues automatically
-- `npm run format` - Format code with Prettier
-- `npm run format:check` - Check code formatting
-- `npm run type-check` - Run TypeScript type checking
-- `npm run qlty` - Run Qlty quality checks
-- `npm run quality` - Run comprehensive quality validation
+## 📱 Usage
 
-## Project Structure
+### Sample Test Data
+Use this sample data to test the application:
+- **Address**: `630 Vaughan Rd, Bloomfield Hills, MI 48304`
+- **Status**: `For Sale` or `Recently Sold`
+- **Agent Name**: `Nolan Grout`
+- **Phone**: `248.225.9677`
+- **Email**: `SOLD@NolanGrout.com`
+- **Headshot URL**: `https://storage.googleapis.com/msgsndr/MtezI3tzORLaDpEMxDAM/media/68adf57c35b4091326c6dce4.jpeg`
+- **Colors**: Primary: `#FFFFFF`, Secondary: `#e8e0d6`, Accent: `#7c89c9`
 
-```
-Listing-Launch/
-├── .daddy/              # Daddy system task management
-├── .qlty/              # Qlty quality tool configuration
-├── src/
-│   ├── components/     # Reusable React components
-│   ├── pages/          # Page components
-│   ├── hooks/          # Custom React hooks
-│   ├── utils/          # Utility functions
-│   ├── types/          # TypeScript type definitions
-│   ├── assets/         # Static assets
-│   ├── test/           # Test configuration and utilities
-│   ├── App.tsx         # Main application component
-│   ├── main.tsx        # Application entry point
-│   └── index.css       # Global styles
-├── daddy_project.md    # Project specification template
-├── package.json        # Dependencies and scripts
-├── tsconfig.json       # TypeScript configuration
-├── vite.config.ts      # Vite configuration
-├── .eslintrc.cjs       # ESLint configuration
-└── .prettierrc         # Prettier configuration
-```
+### Workflow Steps
 
-## Next Steps
+1. **Property Creation** - Fill out the form with property details and agent information
+2. **Content Generation** - Watch the 6-step progress as your marketing package is created
+3. **Content Approval** - Review, edit, approve, and download your complete marketing package
 
-1. **Define Your Project**: Fill out `daddy_project.md` with your specific requirements
-2. **Design Phase**: Add UI mockups to `screenshots/` folder if available
-3. **Architecture**: Plan your component structure and data flow
-4. **Implementation**: Start building your listing management features
+## 🎯 Platform Support
 
-## Development Workflow
+### Social Media Platforms
+- **YouTube** 📺 - Video descriptions, tags, and promotional content
+- **Facebook** 📘 - Posts, carousels, and video content
+- **Instagram** 📷 - Feed posts, Reels, and Stories
+- **LinkedIn** 💼 - Professional posts and articles
+- **X (Twitter)** 🐦 - Threads and media posts
+- **TikTok** 🎵 - Vertical videos with trending hashtags
 
-This project uses the **Daddy System** for task management:
+## 🔗 n8n Integration
 
-- Tasks are tracked in the `.daddy/` folder
-- All major features should be added as tasks first
-- Quality gates ensure code meets standards before completion
-- Use validation agents to verify requirements are met
+The application integrates with n8n workflows via webhook at:
+`https://n8n.srv975468.hstgr.cloud/webhook-test/listing-launch`
 
-## Quality Standards
+## 🛠️ Technical Stack
+- **Frontend**: Next.js 15 with TypeScript
+- **Styling**: Tailwind CSS v4 + Shadcn/ui components
+- **Theme**: Next-themes for dark/light mode
+- **Backend**: n8n workflow integration via webhooks
+- **Deployment**: Vercel-ready configuration
 
-- **TypeScript**: Strict mode enabled with comprehensive type checking
-- **ESLint**: Configured for React + TypeScript best practices
-- **Prettier**: Consistent code formatting across the project
-- **Qlty**: Additional quality checks and formatting validation
-- **Testing**: Unit tests required for components and utilities
-- **Build**: Must build successfully with no warnings
+## 🚀 Deployment
+
+### Vercel Deployment (Recommended)
+1. Connect your GitHub repository to Vercel
+2. Add environment variables in Vercel dashboard
+3. Deploy automatically on push to main branch
 
 ---
 
-**Ready to start development!** 🚀
-
-Run `npm run dev` to start the development server and begin building your listing management application.
+**Built with modern web technologies for real estate professionals who need marketing content fast.** ⚡
